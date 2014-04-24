@@ -1,4 +1,9 @@
 Facturas::Application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :clients, except: [:new, :edit]
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,5 +60,5 @@ Facturas::Application.routes.draw do
   #   end
 
   # Uncomment when using 'history' as the location in Ember's router
-  # get '*foo', :to => 'landing#index'
+  get '*foo', :to => 'landing#index'
 end
