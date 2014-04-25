@@ -14,6 +14,11 @@ Router.map(function() {
     this.route('show', {path: ':client_id'});
     this.route('edit', {path: ':client_id/edit'});
   });
+
+  this.resource('about', function() {
+
+  });
+
 });
 
 export default Router;
